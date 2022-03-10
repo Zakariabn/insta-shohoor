@@ -1,4 +1,8 @@
 bug -1 notes
+  Problem
+    in addToLiked ther was a spelling mistack "likedPostsId.plus(id);"  hiobe push.
+
+solved; 
 
 
 bug -2 notes
@@ -17,5 +21,11 @@ bug -3 notes
 solved
 
 
-bug -3 
-  file line in 29 app.js
+bug -4
+  problem 
+    comments is an array in that array a object declare if we want to access that user we 
+    have to use index 
+
+    i add indexOf[0] after comments
+
+solved
