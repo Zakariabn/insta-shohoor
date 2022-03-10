@@ -8,9 +8,13 @@ bug -2 notes
     i create a vriable and call it userImages = post.userImages.
       app.js line 54 and line 66. in create post function
 
-  solved
+solved
 
+bug -3 notes
+  Problems
+    post.description as text was in a 'text' so showing text not post.description
 
+solved
 
 
 bug -3 
