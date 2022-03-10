@@ -29,3 +29,8 @@ bug -4
     i add indexOf[0] after comments
 
 solved
+
+bug -6 notes
+  in displayLikedPosts function i create a container for like post and befor gose to foreach i add textContent = '';
+
+solved
