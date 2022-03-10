@@ -30,7 +30,14 @@ bug -4
 
 solved
 
+bug -5 
+  problem
+    in displayReportedPosts function thear was post.foreach thats why showing all post 
+
+  i replace post with reportedPosts.foreach
+
+solved
+
 bug -6 notes
   in displayLikedPosts function i create a container for like post and befor gose to foreach i add textContent = '';
-
 solved
