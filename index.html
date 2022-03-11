@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Insta-Sohor</title>
         <link rel="stylesheet" href="./css/style.css" />
+
         <!-- Latest compiled and minified CSS -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -76,10 +77,70 @@
             <div id="reported">
                 <h1>Reported posts</h1>
             </div>
+
+            <!-- question section -->
+            <section class="mt-5 mb-3">
+              <div>
+                <h2 class="text-center">Q&A <br> About Javascript</h2>
+              </div>
+
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      How does Javascript work?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      যখন কোন একটা কোড  রান হয় তখন একটা এক্সিকিউশন কন্টেক্সট তৈরি হয় যার নাম গ্লোবাল এক্সিকিউশন কন্টেক্সট | এক্সিকিউশন কন্টেক্সট দুই ধাপে কাজ করে প্রথম মেমোরি কম্পনেন্ট, মেমোরি কনটেন্ট পুরা কোড ডকুমেন্টের ভেরিয়েবল এবং ফাংশন কে কম্পিউটারের মেমোরিতে key : value আকারে সংরক্ষণ করে key অর্থাৎ ভেরিয়েবল নেম অথবা ফাংশন এর নাম এবং value : undefine set করে | দ্বিতীয় পার্টে আসে কোড কম্পনেন্ট যেখানে ভেরিয়েবলের  এর ভ্যালু অ্যাসাইন করা হয় এবং ফাংশন বডি কে হুবহু সংরক্ষণ করা হয় | তারপর লাইন বাই লাইন কোড এক্সিকিউশন শুরু হয় | <strong>আর এই পুরা কাজটা যেখানে হয় একে বলা হয় call stack |</strong> call stack হলো জাভাস্ক্রিপ্টের ইঞ্জিনের অংশ যেখানে কোড এক্সিকিউট হয় | যখন execution context তৈরি হয় সেটা call stack এ push করা হয় | যখন এক্সিকিউশন কনটেক্সটের কাজ শেষ হয় তখন সেটা call stack থেকে বাহির করে দেয়া হয় | <br> <br>
+                      গ্লোবাল এক্সিকিউশন কনটেক্সটে যখন কোড এক্সিকিউট হয় তখন কোন ফাংশন কে <strong>invoke</strong> করা হলে নতুন একটা এক্সিকিউশন কন্টেক্সট তৈরি হয় এবং
+                      সেটা call stack এ push করা হয়,
+                      
+                      এরপর কল স্টেক প্রথমে এইটাকে এক্সিকিউট করে এরপর এটার এক্সিকিউট শেষ হলে এটাকে বাহির করে দেয়  এবং পুনরায় এর আগের এক্সিকিউশন কনটেক্সটে ফেরত যায় এবং যেখানে ফাংশনটি invoke হয়েছিল এরপর থেকে আবার এক্সিকিউশন চলতে থাকে |
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      What does event loop do?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <span>
+                        
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Local storage & Session storage
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
         </main>
-        <footer></footer>
+
+        <footer class="text-center my-5">
+          <p>wish you enjoying your time hear <br>&#128512;</p>
+        </footer>
 
         <!-- add javascript  file  -->
         <script src="./js/app.js"></script>
+
+        <!-- bootstrap js cdn link -->
+        <!-- CSS only -->
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
