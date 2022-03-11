@@ -109,21 +109,25 @@
                   </h2>
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      <span>
-                        
-                      </span>
+                     <i>Event loop</i> <strong> call stack empty থাকলে callback queue এ যদি কিছু থাকে সেগুলো কে এনে call stack এ পুশ করে</strong> 
+                     <br> <br>
+                     আমরা জানি জাভাস্ক্রিপ্ট সিঙ্গেল রেটেড সিঙ্ক্রোনাইজ ল্যাঙ্গুয়েজ, অর্থাৎ এক টাইমে একটা একটা লাইন-ই এক্সিকিউট হইতে পারে | বা একটা লাইনের এক্সিকিউশন শেষ হইলেই এর পরবর্তী লাইনে যাইতে পারে | কিন্তু কিছু কিছু ওয়েব এপিআই আছে যেগুলো রান হতে টাইম লাগে অথবা আমাদের প্রয়োজনে আমরাই টাইম সেট করে দিতে পারি | তো এইসব ফাংশন যদি নরমাল ভাবে এক্সিকিউট হতে চাই, তাহলে Thread block হয়ে যায়, এইটা যদি হয় তাহলে জাভাস্ক্রিপ্ট খুবই slow এবং কাজের অযোগ্য হয়ে যায় | এই ধরনের সমস্যার জন্যই Event Loop ব্যবহার করা হয় | তো যখন এই ধরনের time-consuming কোন ফাংশন কে কল করা হয় তখন এটা ব্রাউজারের Web API তে কাজ শুরু করে অর্থাৎ যদি কোন ডাটা লোড করতে হয় তখন সে ডাটা লোড করতে থাকে অথবা আমরা যদি কোন টাইম সেট করে দেই তখন সে সেখানেই কাউন্টডাউন শুরু করে এবং complite হলে callBack queue নামক একটা জায়গায় পর্যায়ক্রমে জমা হতে থাকে | এরপর যখন call stack এর এক্সিকিউশন শেষ হয় অর্থাৎ call stack empty হয় | তখন Event loop চেক করে যে CallBack Queue এ কোন কিছু আছে কিনা যদি থাকে সে পর্যায়ক্রমে CallBack Queue থেকে ফাংশনগুলো  এনে call stack এ পুশ করতে থাকে |
                     </div>
                   </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Local storage & Session storage
+                      Difference between  Local storage & Session storage.
                     </button>
                   </h2>
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      Local storage and session storage উভয়ই ওয়েব এপিআই | লোকাল স্টোরেজ এবং সেশন স্টোরেজ এক ধরনের ষ্টোরেজ এই জায়গায় আমরা ওয়েবসাইটের প্রয়োজনীয় ডাটা সেভ রাখতে পারি | উভয়ের কাজ প্রায় একই হলেও দুইটার behavior একটু ভিন্ন | 
+                      <br> <br> 
+
+                      লোকাল ষ্টোরেজ এ কোন Data জমা রাখলে সেটা ডিলিট হয় না যদি না ম্যানুয়ালি অথবা জাভাস্ক্রিপ্টের মাধ্যমে ডিলিট করা হয় | কিন্তু সেশন স্টোরেজে কোন ডাটা রাখলে উইন্ডোর সেশন শেষ হলেই অর্থাৎ উইন্ডোটা বন্ধ করে দিলে এর Data ডিলিট হয়ে যায় | লোকাল স্টোরের সর্বোচ্চ capacity 10mb, But সেশন স্টোরের সর্বোচ্চ capacity 5mb| লোকাল স্টোরেজ যেহেতু session base নয় যার কারণে প্রতিটা window তেই ডাটা পাওয়া পাওয়া যায় | কিন্তু সেশন স্টোরেজের Data শুধু ওই উইন্ডোতেই পাওয়া যায় | <br> <br>
+                      এগুলোই কিছু পার্থক্য এদের মধ্যে |
                     </div>
                   </div>
                 </div>
